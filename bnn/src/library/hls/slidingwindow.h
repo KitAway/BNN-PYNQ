@@ -58,8 +58,8 @@ template<unsigned int ConvKernelDim,
 		unsigned int Stride = 1>  			
  
 void ConvolutionInputGenerator(
-		stream<ap_uint<SIMD*Input_precision> > & in,
-		stream<ap_uint<SIMD*Input_precision> > & out,
+		hls::stream<ap_uint<SIMD*Input_precision> > & in,
+		hls::stream<ap_uint<SIMD*Input_precision> > & out,
 		const unsigned int numReps = 1) {
 
 	if(IFMChannels % SIMD != 0) {
